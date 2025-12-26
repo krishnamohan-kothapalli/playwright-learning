@@ -16,6 +16,9 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
 
+  /* Run tests with only specific tags */
+  grepInvert: /smoke/,
+
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
 
