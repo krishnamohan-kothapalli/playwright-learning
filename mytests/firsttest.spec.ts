@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('To verify the home page', async ({page}) => {
+test('To verify the home page', {tag:'@smoke',}, async ({page}) => {
 
     //navigate to the web page
     await page.goto('https://www.facebook.com/');
@@ -9,7 +9,7 @@ test('To verify the home page', async ({page}) => {
     await expect(page).toHaveTitle(/Facebook/);
 });
 
-test('Input username and password', async({page}) => {
+test('Input username and password', {tag:'@regression'}, async({page}) => {
     await page.goto('https://www.facebook.com/');
 
     const userName = page.getByRole('textbox',{name: 'email'}); 
