@@ -9,7 +9,7 @@ test('To verify the home page', {tag:'@smoke',}, async ({page}) => {
     await expect(page).toHaveTitle(/Facebook/);
 });
 
-test('Input username and password', {tag:'@regression'}, async({page}) => {
+test('Input username and password @regression', async({page}) => {
     await page.goto('https://www.facebook.com/');
 
     const userName = page.getByRole('textbox',{name: 'email'}); 
