@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('To verify the home page', {tag:'@smoke',}, async ({page}) => {
+test('To verify the home page', {tag:'@smoke'}, async ({page}) => {
 
     //navigate to the web page
     await page.goto('https://www.facebook.com/');
