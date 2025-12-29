@@ -2,6 +2,17 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 
-    testMatch: ["login.test.ts"]
-
+    testMatch: ["recorded.test.ts"],
+    use: {
+        headless: false,
+        screenshot: "only-on-failure",
+        "video": "retain-on-failure",
+    },
+    retries: 2,
+    reporter: [["dot"], ["json", {
+        outputFile: "jsonReports/jsonReport.json"
+    }], ["html", {
+        open: "never"
+    }]]
 });
+  
